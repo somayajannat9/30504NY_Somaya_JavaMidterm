@@ -8,9 +8,8 @@ public class Fibonacci {
      * e.g. - 0,1,1,2,3,5,8,13
      **/
 
-    public static void main(String[] args) {
+    public static void fibonacciMethod(int fib){
 
-        int fib = 13;
         int fibArr [] = new int [fib];
         fibArr[0] = 0;
         fibArr[1] = 1;
@@ -31,8 +30,10 @@ public class Fibonacci {
             } else {
                 break;
             }
-
         }
+    }
+
+    public static void main(String[] args) {
 
     }
 }
