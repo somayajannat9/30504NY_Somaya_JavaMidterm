@@ -1,64 +1,118 @@
 ***ANSWER ALL OF THE QUESTIONS BELOW***
 
 What is a programming language?
-Answer:
+Answer: Programming language is used to communicate with computers. It is a set of instructions, grammatical rules and
+vocabulary that instructs the computing device to perform a specific task.
 
 What is a JDK composed of? Define each components?
-Answer:
+Answer: The Java Development Kit is a software development environment used for developing and executing Java applications
+with many development tools. JDK includes the Java Run-time Environment which consists of the compiler, verifier, and
+interpreter. JDK also has the Java Virtual Machine which is inbuilt in both JDK and JRE. The JVM is responsible for
+executing the java program line by line.
 
 What is an IDE?
-Answer:
+Answer: Integrated Development Environment (IDE) is a space where we develop our code, some examples are Intellij and Eclipse.
 
 What are some of the most popular Java IDEs available in the market?
-Answer:
+Answer: NetBeans, Intellij, Eclipse, BlueJ and etc.
 
 Explain the entire java life cycle.
-Answer:
+Answer: * We start with the code or text editor (IDE) to write our code.
+        * In our IDE we create a .java file also known as a class.
+        * When we run/execute our code, our class file gets sent to the compiler.
+        * The .java file gets converted to .class file in bytecodes.
+        * The compiler reads the code and converts the code from a format that is readable by humans to another
+           format that is only readable by machines known as bytecodes. Byte code is interpretable by the JVM.
+        * The JVM loads the .clas file, then it goes to the bytecode verifier and lastly it gets sent to the interpreter
+        which does the translation from bytecodes to whatever language the particular machine understands.
 
 What is a class?
-Answer:
+Answer: A Class is like an object constructor, or a "blueprint" for creating objects. It is a template used to create
+objects and to define object data types and methods.
 
 What is an object?
-Answer:
+Answer: A Java object is a member (also called an instance) of a Java class. Each object has an identity, a behavior
+and a state. The state of an object is stored in fields (variables), while methods (functions) display the object's behavior.
 
 What is the entry point of a Java project?
-Answer:
+Answer: The main() method is the entry point of each and every Java program. The main() method is required because
+the compiler starts executing a program from this entry point. " public static void main(String[] args) " .
 
 Why is the main() method static?
-Answer:
+Answer: Java main() method is always static, so that compiler can call it without the creation of an object or
+before the creation of an object of the class.
 
 Which class is the superclass of all classes?
-Answer:
+Answer: The object class is the superclass of all classes.
 
 What is difference between path and classpath variables?
-Answer:
+Answer: The ClassPath is a parameter in the Java Virtual Machine(JVM) or the Java compiler that is used by a system or
+application ClassLoader to locate and load compiled Java bytecodes stored in the “.class” file. PATH is an environment
+ variable that is used to find and locate binary files like “java” and “javac” and to locate needed executables
+ from the command line or Terminal window.
 
 What is the difference between an Interface and Abstract class?
-Answer:
+Answer: An interface cannot have state, whereas the abstract class can have state with instance variables.
+A class can have multiple interfaces but a class can extend only one abstract class.
 
 Can you make an Object from an Interface and Abstract class? If yes or no, how would you do it?
-Answer:
+Answer: You can not instantiate an abstract classes. To use an abstract class, you have to inherit it from another class
+then, in the child class provide implementations to all the abstract methods.
+Like abstract classes, interfaces cannot be used to create objects. Interface methods do not have a body
+ - the body is provided by the "implement" class. On implementation of an interface, you must override all of its methods
 
 What is Access Modifier?
-Answer:
+Answer: Access modifiers are used to set the accessibility and visibility of classes, interfaces, variables,
+methods, constructors, data members, and the setter methods.
+There are 4 types of access modifiers: public, protected, private and default(protected).
 
 What is OOP? Define each OOP concept.
-Answer:
+Answer: Object oriented programming is the use of objects in programming, they use objects as a primary source
+        to implement what is to happen in the code. Objects are seen by the viewer, performing tasks assigned by the programmer.
+
+        Encapsulation: hiding data by using "private". Other objects don’t have direct access to this data.
+        Instead, they can only call a list of public functions called methods. no other class can touch it unless
+        explicitly allowed. If you want to communicate with the object, you should use the methods provided but cannot
+        change or alter the information.
+
+        Inheritance: It means that you create a (child) class by deriving from another (parent) class to form a hierarchy.
+        The child class reuses all fields and methods of the parent class (common part) and can implement its own (unique part).
+
+        Polymorphism: polymorphism is the ability of a message to be displayed in more than one form.
+        In Java polymorphism is mainly divided into two types:
+            Compile-time Polymorphism: Method overloading, When there are multiple functions with the same name but
+            different parameters then these functions are said to be overloaded.
+            Runtime Polymorphism: Method overriding, It is a process in which a function call to the overridden method
+            is resolved at Runtime. Method overriding occurs when a derived class has a definition for one of the
+            member functions of the base class. That base function is said to be overridden.
+
+        Abstraction: hide internal implementation details. It should only reveal operations relevant for
+        the other objects. abstraction is achieved by interfaces and abstract classes.
+        We can achieve 100% abstraction using interfaces.
 
 What is Java Package and which package is imported by default?
-Answer:
+Answer: The Lang package is internally imported by default which provides the fundamental classes that are necessary
+to design a basic Java program.
 
 What is an API? List some API's that you have used so far.
-Answer:
+Answer: The pre-integrated software components used for establishing a communication between desired
+       software/platforms/components. Developers can refer to the classes and packages of available APIs and
+       speed up the process of explaining the classes and packages for the planned program. Ex. SQL
 
 Does java support multiple inheritance? Why or why not?
-Answer:
+Answer: No, because when a class have more than one parent class with same method signature, when calling a method
+    the compiler cannot determine which class method to be called and even on calling which class method gets the priority.
 
 What is method overloading? List all of the different ways to overload.
-Answer:
+Answer: Method overloading is when 2 or methods have the same name and differ in parameters .
+        We can have methods with the same name but different number, type or different order of parameters.
 
 Explain exceptions in java and how to handle them.
-Answer:
+Answer: An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of
+the program's instructions. 3 types of exceptions:
+                            Checked Exceptions-compile-time errors
+                            Unchecked exceptions- run-time errors
+                            Unhandled exceptions-
 
 What is static keyword? When and how do we use it?
 Answer:
