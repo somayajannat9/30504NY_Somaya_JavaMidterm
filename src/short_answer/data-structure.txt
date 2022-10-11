@@ -1,7 +1,8 @@
 ***ANSWER ALL OF THE QUESTIONS BELOW***
 
 Why do we need data structure?
-Answer:
+Answer: Data Structures are used to increase the efficiency and performance of an application by organizing the data
+ in such a manner that it requires less space with higher processing speed.
 
 What are the various operations that can be performed on different data structures?
 Answer:
