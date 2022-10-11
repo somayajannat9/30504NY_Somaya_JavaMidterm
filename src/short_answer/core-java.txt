@@ -285,3 +285,4 @@ Answer:
 Explain what static binding and dynamic binding is?
 Answer: Static Binding - Static members of classes are bound to memory at compile time.
         Dynamic Binding - Non-static members of classes are bound to memory at runtime.
+        
