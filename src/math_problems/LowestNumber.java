@@ -25,5 +25,7 @@ public class LowestNumber {
                 }
                 System.out.println("The smallest number is : "+ smallest);
             }
+
+            // the smallest number is: 5 
         }
 
