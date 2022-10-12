@@ -1,5 +1,8 @@
 package string_problems;
 
+import java.sql.Driver;
+
+
 public class Palindrome {
 
     /** INSTRUCTIONS
@@ -11,8 +14,16 @@ public class Palindrome {
      */
 
     public static void main(String[] args) {
-
+        String myString = "kayak";
+        StringBuffer buffer = new StringBuffer(myString);
+        buffer.reverse();
+        String data = buffer.toString();
+        if(myString.equals(data)){
+            System.out.println("Given String kayak is a palindrome");
+        } else {
+            System.out.println("Given String kayak is not palindrome");
+        }
     }
-    // Implement here
+
 
 }
