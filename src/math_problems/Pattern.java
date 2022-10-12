@@ -1,5 +1,8 @@
 package math_problems;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Pattern {
 
     /** INSTRUCTIONS
@@ -12,5 +15,18 @@ public class Pattern {
 
     public static void main(String[] args) {
 
+        for (int i=100; i>90; i--) {
+            System.out.print(i + ",");         // for as long as i is greater than 90, keep subtracting 1 from i.
+        }
+        for (int i=90; i>70; i=i-2) {
+            System.out.print(i + ",");       //for as long as i is greater than 70, keep subtracting 2 from i.
+        }
+        for (int i= 70; i>40; i=i-3) {
+            System.out.print(i+ ",");        // for as long as i is greater than 40, keep subtracting 3 from i.
+        }
+        for (int i=40; i>0; i=i-4) {
+            System.out.print(i+ ",");       //for as long as i is greater than 0, keep subtracting 4 from i.
+        }
+        }
     }
-}
+
