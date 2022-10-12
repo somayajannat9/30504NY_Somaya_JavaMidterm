@@ -277,10 +277,11 @@ Answer: JUnit is an open-source framework used to trigger and write tests. TestN
  upgraded option for running tests.
 
 What are the dependencies for this project?
-Answer:
+Answer: Some dependencies of this project are java.util.Arrays, java.util.Scanner, java.lang.reflect.Array and more.
 
 What is dependency injection in Java?
-Answer: 
+Answer: Dependency injection enables you to turn regular Java classes into managed objects and to inject
+them into any other managed object.
 
 Explain what static binding and dynamic binding is?
 Answer: Static Binding - Static members of classes are bound to memory at compile time.
