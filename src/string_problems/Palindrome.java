@@ -18,7 +18,7 @@ public class Palindrome {
         StringBuffer buffer = new StringBuffer(myString);
         buffer.reverse();
         String data = buffer.toString();
-        if(myString.equals(data)){
+        if (myString.equals(data)) {
             System.out.println("Given String kayak is a palindrome");
         } else {
             System.out.println("Given String kayak is not palindrome");
