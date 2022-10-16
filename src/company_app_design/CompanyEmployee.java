@@ -14,6 +14,19 @@ public class CompanyEmployee {
      */
     public static void main(String[] args) {
 
+        EmployeeInfo emily = new EmployeeInfo("emily", 1, 40000);
+
+        System.out.println(emily.name + "'s ID is " + emily.employeeId + " and salary is " + emily.salary);
+
+        EmployeeInfo somaya = new EmployeeInfo("somaya", 2,80000);
+
+        System.out.println(somaya.name + "'s ID is " + somaya.employeeId + " and salary is " + somaya.salary);
+
+        EmployeeInfo fish = new EmployeeInfo("fish", 3, 90000);
+
+        System.out.println(fish.name + "'s ID is " + fish.employeeId + " and salary is " + fish.salary);
+
+
     }
 
 }

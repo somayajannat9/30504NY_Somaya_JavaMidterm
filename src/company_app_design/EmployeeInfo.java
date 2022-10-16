@@ -24,12 +24,22 @@ public class EmployeeInfo {
     // Make sure to declare and use static, non-static & final fields
     static final String companyName = "Tesla";
 
+    public String name;
+    public int employeeId;
+    public int salary;
+
     // You must have/use multiple constructors to initialize instance variables that you will create above
     public EmployeeInfo(int employeeId) {
 
+        this.employeeId = employeeId;
+
     }
 
-    public EmployeeInfo(String name, int employeeId) {
+    public EmployeeInfo(String name, int employeeId, int salary) {
+
+        this.name = name;
+        this.employeeId = employeeId;
+        this.salary = salary;
 
     }
 
@@ -45,6 +55,15 @@ public class EmployeeInfo {
     public static int calculateAnnualBonus(int salary, int performanceGrade) {
         int total = 0;
 
+        total = salary + salary*(performanceGrade/100);
+
+        return total;
+    }
+
+    public int calculateAnnualBonus(int performanceGrade) {
+        int total = 0;
+
+        total = this.salary + this.salary*(performanceGrade/100);
 
         return total;
     }
