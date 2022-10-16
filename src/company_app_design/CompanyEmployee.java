@@ -17,6 +17,7 @@ public class CompanyEmployee {
         EmployeeInfo emily = new EmployeeInfo("emily", 1, 40000);
 
         System.out.println(emily.name + "'s ID is " + emily.employeeId + " and salary is " + emily.salary);
+        
 
         EmployeeInfo somaya = new EmployeeInfo("somaya", 2,80000);
 
