@@ -68,21 +68,36 @@ be shared between multiple threads but HashMap can not be shared between multipl
 
 How do HashMaps work in Java? How do they store values, and when are they useful?
 Answer:
+Hashmap is a collection of key-value pairs and an array of nodes. It uses an array and LinkedList for storing key-value pairs.
+Hashmap also uses a method called Hashing that converts an object into integer form through Hashcoding.
 
 What is ArrayIndexOutOfBoundsException in java? When does it occur?
-Answer:
+Answer: When the index is outside the bunds -- less than zero OR greater than the array size minus one.
 
 What are the different ways of copying an array into another array?
-Answer:
+Answer: using loops or the built-in array copy method
 
 What is DFS and BFS?
 Answer:
+    Using source: https://www.geeksforgeeks.org/difference-between-bfs-and-dfs/
+
+    DFS, Depth First Search, is an edge-based technique. It uses the Stack data structure and performs two stages,
+    first visited vertices are pushed into the stack, and second if there are no vertices then visited vertices are popped.
+
+    BFS, Breadth-First Search, is a vertex-based technique for finding the shortest path in the graph.
+    It uses a Queue data structure that follows first in first out. In BFS,
+    one vertex is selected at a time when it is visited and marked then its adjacent are visited and stored in the queue.
+    It is slower than DFS.
 
 What is Recursion?
-Answer:
+Answer: When calling the method inside of the method.
 
 What are linear and non-linear data Structures?
 Answer:
+Arrays, stacks, linked lists, and queues are the forms of a linear data structure.
+Trees, graphs, are the forms of a non-linear data structure.
 
 Outline different sorting algorithms and their time complexities:
-
+Selection Sort	Ω (n^2)	θ (n^2)	O (n^2)	O (1)
+Bubble Sort	Ω (n)	θ (n^2)	O (n^2)	O (1)
+Insertion Sort	Ω (n)	θ (n^2)	O (n^2)	O (1)
