@@ -26,7 +26,7 @@ public class SortEfficiency {
 
     public static void main(String[] args) throws Exception {
         // Declare and initialize an array of a desired length with random numbers (Try this with 100, 1000, 10000, 100000)
-        int[] numberArray = new int[100];
+        int[] numberArray = new int[10];
         insertRandomNumbersIntoArray(numberArray);
 
         SortingAlgorithms sort = new SortingAlgorithms();
@@ -34,18 +34,20 @@ public class SortEfficiency {
 
         // region Selection Sort
         numberArray = sort.selectionSort(numberArray);
-        long selectionSortExecutionTime = sort.executionTime;
 
-        System.out.println("***SELECTION SORT***\nArray Length: " + numberArray.length + "\nExecution Time: "
-                + selectionSortExecutionTime + " milliseconds");
+        System.out.println("\n***SELECTION SORT***\nArray Length: " + numberArray.length + "\nExecution Time: "
+                + sort.executionTime + " milliseconds");
+
+        printValue(numberArray);
 
         // Insert sorted array into a database table, with the desired table name and column name
-        ssdb.insertIntegerArray("selection_sort", "sorted_numbers", numberArray);
+        // TODO
+        // ssdb.insertIntegerArray("selection_sort", "sorted_numbers", numberArray);
 
         // Retrieve all elements from the newly created table
-        String query = "SELECT * FROM SELECTION_SORT";
-        List<String> sorted_numbers = ssdb.executeQueryReadAllSingleColumn(query, "sorted_numbers");
-        printValue(sorted_numbers);
+//        String query = "SELECT * FROM SELECTION_SORT";
+//        List<String> sorted_numbers = ssdb.executeQueryReadAllSingleColumn(query, "sorted_numbers");
+//        printValue(sorted_numbers);
 
         // endregion
 
@@ -54,16 +56,23 @@ public class SortEfficiency {
 
         // region Insertion Sort
         numberArray = sort.insertionSort(numberArray);
-        long insertionSortExecutionTime = sort.executionTime;
 
-        System.out.println("Total Execution Time of " + numberArray.length + " numbers in Insertion Sort took: "
-                + insertionSortExecutionTime + " milliseconds");
+        System.out.println("\n***INSERTION SORT***\nArray Length: " + numberArray.length + "\nExecution Time: "
+                + sort.executionTime + " milliseconds");
+
+        printValue(numberArray);
 
         // endregion
 
         randomize(numberArray);
 
         // region Bubble Sort
+        numberArray = sort.bubbleSort(numberArray);
+
+        System.out.println("\n***BUBBLE SORT***\nArray Length: " + numberArray.length + "\nExecution Time: "
+                + sort.executionTime + " milliseconds");
+
+        printValue(numberArray);
 
         // endregion
 
@@ -71,11 +80,25 @@ public class SortEfficiency {
 
         // region Merge Sort
 
+        numberArray = sort.mergeSort(numberArray);
+
+        System.out.println("\n***Merge SORT***\nArray Length: " + numberArray.length + "\nExecution Time: "
+                + sort.executionTime + " milliseconds");
+
+        printValue(numberArray);
+
         // endregion
 
         randomize(numberArray);
 
         // region Quick Sort
+
+        numberArray = sort.quickSort(numberArray);
+
+        System.out.println("\n***QUICK SORT***\nArray Length: " + numberArray.length + "\nExecution Time: "
+                + sort.executionTime + " milliseconds");
+
+        printValue(numberArray);
 
         // endregion
 
@@ -142,6 +165,11 @@ public class SortEfficiency {
             System.out.println(st);
         }
     }
+        private static void printValue(int [] arr) {
+            for (int element : arr) {
+                System.out.println(element);
+            }
+        }
 
     // endregion
 }
