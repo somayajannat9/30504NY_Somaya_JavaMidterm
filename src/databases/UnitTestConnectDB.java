@@ -18,8 +18,8 @@ public class UnitTestConnectDB {
         SharedStepsDatabase ssdb = new SharedStepsDatabase();
 
         // region ExecuteQueryReadOne
-//        String query = "SELECT 1 FROM DUAL";
-//        String result = ssdb.executeQueryReadOne(query);
+        String query = "SELECT 1 FROM DUAL";
+        String result = ssdb.executeQueryReadOne(query);
 //
 //        System.out.println(result);
 //        // endregion

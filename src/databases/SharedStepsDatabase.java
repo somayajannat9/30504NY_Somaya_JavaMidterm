@@ -1,5 +1,7 @@
 package databases;
 
+import xml.Student;
+
 import java.io.*;
 import java.sql.*;
 import java.util.*;
@@ -195,6 +197,7 @@ public class SharedStepsDatabase {
         }
     }
 
+
     /**
      * @throws SQLException
      *
@@ -243,16 +246,36 @@ public class SharedStepsDatabase {
     }
 
     /**
-     * Inserts a map to a database table
+     * Inserts a list of Strings to a database table in a specified column
+     * Params:
      *
-     * @param tableName Name of the table
-     * @param map The map to be inserted
+     * @param tableName- name of table
+     * @param columnName - name of column
+     * @param list -list to be inserted
      */
+    public void insertListOfString(String tableName, String columnName, List<String> list) {
+        dropTable(tableName);
+        boolean isNumericalData = false;
+
+        createTableSingleColumn(tableName, columnName, isNumericalData);
+
+        try {
+            for (String s : list) {
+                ps = connect.prepareStatement("INSERT INTO " + tableName + " ( " + columnName + " ) VALUES(?)");
+                ps.setObject(1, s);
+                ps.executeUpdate();
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+
     public void insertMap(String tableName, Map<Object, Object> map) {
         try {
             ps = connect.prepareStatement("DROP TABLE IF EXISTS " + tableName + ";");
             ps.executeUpdate();
-            ps = connect.prepareStatement("CREATE TABLE " + tableName + " (`key` VARCHAR(45) DEFAULT 1 NOT NULL, `value` VARCHAR(45) NULL);");
+            ps = connect.prepareStatement("CREATE TABLE " + tableName + " (`key` VARCHAR(45) DEFAULT 1 NOT NULL, `value` VARCHAR(200) NULL);");//update to fit long string
             ps.executeUpdate();
 
             StringBuilder sql = new StringBuilder("INSERT INTO ").append(tableName).append(" (`key`, `value`)").append(" VALUES (");
@@ -286,7 +309,7 @@ public class SharedStepsDatabase {
         if (areIntegerValues) {
             cellDataType = "bigint(20)";
         } else {
-            cellDataType = "VARCHAR(45)";
+            cellDataType = "VARCHAR(4000)"; // update to fit large string so we can store text file
         }
 
         try {
@@ -297,6 +320,8 @@ public class SharedStepsDatabase {
             ex.printStackTrace();
         }
     }
+
+
 
     /**
      * Closes all static resources
